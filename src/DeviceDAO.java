@@ -37,6 +37,9 @@ public class DeviceDAO {
                         resultSet.getString("USERNAME"));
                 deviceList.add(device);
             }
+            connection.close();
+            preparedStatement.close();
+            resultSet.close();
         } catch (Exception e){
             e.printStackTrace();
         }

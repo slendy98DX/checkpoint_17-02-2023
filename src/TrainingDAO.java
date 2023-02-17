@@ -56,6 +56,9 @@ public class TrainingDAO {
                         session,
                         resultSet.getString("USER_USERNAME"));
             }
+            connection.close();
+            preparedStatement.close();
+            resultSet.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
